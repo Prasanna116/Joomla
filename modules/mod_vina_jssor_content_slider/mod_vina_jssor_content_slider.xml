@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	
+<!-- Author Block -->
+	<name>Vina Jssor Content Slider</name>
+	<author>VinaGecko.com</author>
+	<creationDate>March 15, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>support@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.2.0</version>
+	
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+		<strong>Vina Jssor Content Slider</strong> is awesome module responsive slideshow for Joomla! 3. This module is based on Jssor jQuery Slider - is announced as one of the best performance sliders. Vina Jssor Content Slider is cross browser slider, all browsers are supported. You can add unlimited number of slides, captions and control many features in the module config.
+		<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_jssor_content_slider">mod_vina_jssor_content_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>samples</folder>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_jssor_content_slider.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_vina_jssor_content_slider/libs/elements">
+			<fieldset name="basic">
+				<field
+					name="bg_image"
+					type="media" 
+					label="VINA_JSSOR_CS_MAIN_IMAGE" 
+					description="VINA_JSSOR_CS_MAIN_IMAGE_DESC" 
+					size="30"
+					default="" />
+				<field 
+                    name="isBgColor" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_IS_BG_COLOR" 
+                    description="VINA_JSSOR_CS_IS_BG_COLOR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="bg_color"
+					type="color" 
+					label="VINA_JSSOR_CS_BG_COLOR" 
+					description="VINA_JSSOR_CS_BG_COLOR_DESC" 
+					size="30"
+					default="#003399" />
+				<field
+					name="maxWidth"
+					type="text" 
+					label="VINA_JSSOR_CS_MAX_WIDTH" 
+					description="VINA_JSSOR_CS_MAX_WIDTH_DESC" 
+					size="30"
+					default="980" />
+				<field
+					name="maxHeight"
+					type="text" 
+					label="VINA_JSSOR_CS_MAX_HEIGHT" 
+					description="VINA_JSSOR_CS_MAX_HEIGHT_DESC" 
+					size="30"
+					default="400" />
+				<field
+					name="scaleWidth"
+					type="text" 
+					label="VINA_JSSOR_CS_SET_SCALE_WIDTH" 
+					description="VINA_JSSOR_CS_SET_SCALE_WIDTH_DESC" 
+					size="30"
+					default="980" />
+				<field 
+                    name="captionTransitions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_CAPTION_TRANSITIONS" 
+                    description="VINA_JSSOR_CS_CAPTION_TRANSITIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="captionTransitionList"
+					type="textarea" rows="3"
+					default="{$Duration:900,$FlyDirection:1,$Easing:{$Left:$JssorEasing$.$EaseInOutSine},$ScaleHorizontal:0.6,$Opacity:2}"
+					label="VINA_JSSOR_CS_CAPTION_TRANSITION_LIST"
+					description="VINA_JSSOR_CS_CAPTION_TRANSITION_LIST_DESC" />
+				<field 
+                    name="isTextColor" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_IS_TEXT_COLOR" 
+                    description="VINA_JSSOR_CS_IS_TEXT_COLOR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="text_color"
+					type="color" 
+					label="VINA_JSSOR_CS_TEXT_COLOR" 
+					description="VINA_JSSOR_CS_TEXT_COLOR_DESC" 
+					size="30"
+					default="#FFFFFF" />
+				<field 
+                    name="imageTransitions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_IMAGE_TRANSITIONS" 
+                    description="VINA_JSSOR_CS_IMAGE_TRANSITIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="imageTransitionList"
+					type="textarea" rows="3"
+					default="{$Duration:1200,$Opacity:2}"
+					label="VINA_JSSOR_CS_IMAGE_TRANSITION_LIST"
+					description="VINA_JSSOR_CS_IMAGE_TRANSITION_LIST_DESC" />
+				<field 
+                    name="resizeImage" 
+                    type="list" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_RESIZE_IMAGE" 
+                    description="VINA_JSSOR_CS_RESIZE_IMAGE_DESC">
+                        <option value="0">No Resize Image</option>
+                        <option value="1">Use Timthumb Class</option>
+						<option value="2">Use CSS Resize</option>
+                </field>
+				<field
+					name="imageWidth"
+					type="text" 
+					label="VINA_JSSOR_CS_IMAGE_WIDTH" 
+					description="VINA_JSSOR_CS_IMAGE_WIDTH_DESC" 
+					size="30"
+					default="500" />
+				<field
+					name="imageHeight"
+					type="text" 
+					label="VINA_JSSOR_CS_IMAGE_HEIGHT" 
+					description="VINA_JSSOR_CS_IMAGE_HEIGHT_DESC" 
+					size="30"
+					default="300" />
+				<field
+					name="imageTop"
+					type="text" 
+					label="VINA_JSSOR_CS_IMAGE_TOP" 
+					description="VINA_JSSOR_CS_IMAGE_TOP_DESC" 
+					size="30"
+					default="23" />
+				<field
+					name="imageLeft"
+					type="text" 
+					label="VINA_JSSOR_CS_IMAGE_LEFT" 
+					description="VINA_JSSOR_CS_IMAGE_LEFT_DESC" 
+					size="30"
+					default="480" />
+				<field 
+                    name="showNavigator" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_SHOW_NAVIGATOR" 
+                    description="VINA_JSSOR_CS_SHOW_NAVIGATOR_DESC">
+                        <option value="0">Never</option>
+                        <option value="1">Mouse Over</option>
+						<option value="3">Always</option>
+                </field>
+				<field 
+                    name="showThumbnail" 
+                    type="list" 
+                    default="2" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_SHOW_THUMBNAIL_IMAGE" 
+                    description="VINA_JSSOR_CS_SHOW_THUMBNAIL_IMAGE_DESC">
+                        <option value="0">Never</option>
+                        <option value="1">Mouse Over</option>
+						<option value="2">Always</option>
+                </field>
+				<field 
+                    name="thumbnailActionMode" 
+                    type="list" 
+                    default="2" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_SHOW_THUMBNAIL_ACTION_MODE" 
+                    description="VINA_JSSOR_CS_SHOW_THUMBNAIL_ACTION_MODE_DESC">
+                        <option value="0">None</option>
+                        <option value="1">By Click</option>
+						<option value="2">Mouse Hover</option>
+						<option value="3">Click and Mouse hover</option>
+                </field>
+				<field 
+                    name="autoPlay" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_AUTOPLAY" 
+                    description="VINA_JSSOR_CS_AUTOPLAY_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="autoPlayInterval"
+					type="text" 
+					label="VINA_JSSOR_CS_AUTOPLAY_INTERVAL" 
+					description="VINA_JSSOR_CS_AUTOPLAY_INTERVAL_DESC" 
+					size="30"
+					default="4000" />
+				<field 
+                    name="pauseOnHover" 
+                    type="list" 
+                    default="3" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_PAUSE_ON_HOVER" 
+                    description="VINA_JSSOR_CS_PAUSE_ON_HOVER_DESC">
+                        <option value="0">JNO</option>
+						<option value="1">Pause for Desktop</option>
+                        <option value="2">Pause for Touch Device</option>
+						<option value="3">Pause for Desktop and Touch Device</option>
+                </field>
+				<field 
+                    name="arrowKeyNavigation" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_ARROW_KEY_NAVIGATION" 
+                    description="VINA_JSSOR_CS_ARROW_KEY_NAVIGATION_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="slideDuration"
+					type="text" 
+					label="VINA_JSSOR_CS_SLIDE_DURATION" 
+					description="VINA_JSSOR_CS_SLIDE_DURATION_DESC" 
+					size="30"
+					default="800" />
+				<field 
+                    name="playOrientation" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_PLAY_ORENTATION" 
+                    description="VINA_JSSOR_CS_PLAY_ORENTATION_DESC">
+                        <option value="1">Horizental</option>
+                        <option value="2">Vertical</option>
+                </field>
+				<field 
+                    name="dragOrientation" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_DRAG_ORENTATION" 
+                    description="VINA_JSSOR_CS_DRAG_ORENTATION_DESC">
+                        <option value="0">No Drag</option>
+						<option value="1">Horizental</option>
+                        <option value="2">Vertical</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="slider">
+				<field name="slides" type="data" label="Slides" description="" filter="raw" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field 
+                    name="copyRightText" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_CS_SHOW_COPYRIGHT_TEXT" 
+                    description="VINA_JSSOR_CS_SHOW_COPYRIGHT_TEXT">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="layout"
+					type="modulelayout"
+					default="_:default"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+						<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

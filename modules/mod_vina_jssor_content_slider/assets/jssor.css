@@ -1,0 +1,125 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Jssor Content Slider for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum:    http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+
+.vina-content-slider-wrapper {
+	position: relative;
+	margin: 0 auto;
+	top: 0px;
+	left: 0px;
+}
+.vina-content-slider-wrapper .vcs-loading {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.vina-content-slider-wrapper .vcs-mask {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.vina-content-slider-wrapper .vcs-icon {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.vina-content-slider-wrapper .vcs-slides-container {
+	cursor: move;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.vina-content-slider-wrapper .vcs-slide-text {
+	position: absolute;
+	text-align: left;
+	line-height: 1.8em;
+	font-size: 12px;
+}
+.vina-content-slider-wrapper .vcs-slide-text .line-1 {
+	display: block;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-size: 52px;
+	color: #FFFFFF;
+}
+.vina-content-slider-wrapper .vcs-slide-text .line-2 {
+	display: block;
+	line-height: 1.1em;
+	font-size: 2.5em;
+	color: #FFFFFF;
+}
+.vina-content-slider-wrapper .vcs-slide-image {
+	position: absolute;
+}
+.vina-content-slider-wrapper .jssord07l,
+.vina-content-slider-wrapper .jssord07r,
+.vina-content-slider-wrapper .jssord07ldn,
+.vina-content-slider-wrapper .jssord07rdn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	background: url(images/d07.png) no-repeat;
+}
+.vina-content-slider-wrapper .jssord07l {
+	background-position: -5px -35px;
+}
+.vina-content-slider-wrapper .jssord07r {
+	background-position: -65px -35px;
+}
+.vina-content-slider-wrapper .jssord07l:hover {
+	background-position: -125px -35px;
+}
+.vina-content-slider-wrapper .jssord07r:hover {
+	background-position: -185px -35px;
+}
+.vina-content-slider-wrapper .jssord07ldn {
+	background-position: -245px -35px;
+}
+.vina-content-slider-wrapper .jssord07rdn {
+	background-position: -305px -35px;
+}
+.vina-content-slider-wrapper .jssort04 .c {
+	width: 62px;
+	height: 32px;
+	filter: alpha(opacity=45);
+	opacity: .45;
+	transition: opacity .6s;
+	-moz-transition: opacity .6s;
+	-webkit-transition: opacity .6s;
+	-o-transition: opacity .6s;
+}
+.vina-content-slider-wrapper .jssort04 .p:hover .c, 
+.vina-content-slider-wrapper .jssort04 .pav .c {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+.vina-content-slider-wrapper .jssort04 .p:hover .c {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+}
+.vina-content-slider-wrapper .jssort04 .w,
+.vina-content-slider-wrapper .jssort04 .pav:hover .w {
+	position: absolute;
+	width: 62px;
+	height: 32px;
+}
